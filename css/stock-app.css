@@ -1,0 +1,39 @@
+            .container,
+            .searchContainer {
+                width: 865px;
+                display: inline-block;
+            }
+            .searchContainer {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding-left: 15px;
+            }
+            .searchContainer span {
+                font-size: 12px;
+                font-weight: bold;
+            }
+            #stock-quotes div {
+                float: left;
+                width: 100px;
+                border: 1px solid #003B84;
+                color: #587BC4;
+                padding: 3px;
+            }
+            #quote-header div {
+                background-color: #EBF4FE;
+                color: #236CAD;
+                text-align: center;
+                width: 100px;
+                float: left;
+                border: 1px solid #003B84;
+                padding: 3px;
+                font-weight: bold;
+            }
+            .startdate,
+            .searchbutton{
+                margin-left: 5px;
+            }
+            .errorLog {
+                color: red;
+                padding-top: 5px;
+            }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STOCK LIST</title>
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <link rel="stylesheet" href="css/stock-app.css" />
+    </head>
+    <body>
+        <form data-bind="submit: validateEntry">
+            <div class="searchContainer">
+                <span>STOCK SYMBOL :</span> <input type="text" name="stockSymbol" value="" />
+                <span class="startdate">START DATE :</span> <input type="text" name="startDate" readonly class="datepicker start" />
+                <span class="enddate">END DATE:</span> <input type="text" name="endDate" readonly class="datepicker end" />
+                <input type="submit" name="stockSubmit" value="Search" class="searchbutton" />
+                <div class="errorLog">
+                    <span data-bind="visible: isStockSymbolEmpty()">Stock Symbol Required!</span>
+                    <span data-bind="visible: isInvalidStartEndDates()">Invalid Start Date/End Date!</span>
+                </div>
+            </div>
+        </form>
+        <div class="container">
+            <div id="quote-header">
+                <div>Symbol</div>
+                <div>Open</div>
+                <div>Low</div>
+                <div>High</div>
+                <div>Date</div>
+                <div>Close</div>
+                <div>Adj_Close</div>
+                <div>Volume</div>
+            </div>
+            <div id="stock-quotes" data-bind="foreach: stockQuoteListObserve">
+                <div data-bind="text: Symbol"></div>
+                <div data-bind="text: Open"></div>
+                <div data-bind="text: Low"></div>
+                <div data-bind="text: High"></div>
+                <div data-bind="text: Date"></div>
+                <div data-bind="text: Close"></div>
+                <div data-bind="text: Adj_Close"></div>
+                <div data-bind="text: Volume"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/knockout-3.1.0.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
