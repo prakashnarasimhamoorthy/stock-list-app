@@ -19,11 +19,8 @@
                 crossDomain: true,
                 type: 'GET',
                 success: function(data){
-                    console.log(data);
                     if (data && data.query && data.query.results.quote.length > 0) {
                         self.stockQuoteList = [];
-                        console.log("Inside");
-                        console.log(self.stockQuoteList);
                         for(var ind in data.query.results.quote){
                             self.stockQuoteList.push(data.query.results.quote[ind]);
                         }
